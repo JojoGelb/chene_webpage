@@ -79,7 +79,7 @@ header nav ul a li {
 }
 
 header nav ul a li:hover {
-    background-image: url('Capture.PNG');
+    background-image: url('nav_background.png');
     background-size: 100% 100%;
     color: #1E1F25;
     animation: spring 300ms ease-out;
