@@ -1,0 +1,343 @@
+*{
+    margin: 0;
+	padding: 0;
+    color: white;
+}
+
+body{
+    background: #1E1F25;
+    --nav-load-time: 500ms;
+    --nav-link-load-time: 700ms;
+    --out-of-page-distance : 200%;
+}
+
+/* 
+=====================================================================================
+                                    Header
+=====================================================================================
+*/ 
+
+header {
+    /*background: #121318;*/
+    background: rgba(7, 7, 9, .60) ;
+    position: -webkit-sticky; /*Safari*/
+    position: sticky;
+    width: 100%;
+    top: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+    animation: nav-load var(--nav-load-time) ease-out;
+    z-index: 10;
+}
+
+header nav {
+    width: 100%;
+}
+
+header nav ul{
+    list-style-type: none;
+	display: flex;
+	width: 100%;
+    
+    align-items: center;
+	justify-content: space-around;
+	text-align: center;
+}
+
+header nav ul a{
+    text-decoration: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    animation-name: nav-link-load;
+    animation-duration: var(--nav-link-load-time);
+    animation-timing-function: ease-in;
+    animation-delay: var(--nav-load-time);
+    animation-fill-mode: forwards;
+    transform: scale(0);
+}
+
+header nav ul a:first-child{
+    animation-name: nav-first-link-load;
+    animation-duration: var(--nav-link-load-time);
+    animation-timing-function: ease-out;
+    transform: translateX(calc(-1*var(--out-of-page-distance)) );
+}
+
+header nav ul a:last-child{
+    animation-duration: var(--nav-link-load-time);
+    animation-timing-function: ease-out;
+    animation-name: nav-last-link-load;
+    transform: translateX(var(--out-of-page-distance));
+}
+
+header nav ul a li {
+	padding: 1vw 2vw 1.15vw;
+    font-size: min(2vw, 25px);
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #ebebeb;
+	margin: auto;
+}
+
+header nav ul a li:hover {
+    background-image: url('Capture.PNG');
+    background-size: 100% 100%;
+    color: #1E1F25;
+    animation: spring 300ms ease-out;
+    text-shadow: 0 -1px 0 #95ef6c;
+	font-weight: bold;
+}
+
+header nav ul li:active {
+  transform: translateY(4px);
+}
+
+@keyframes spring {
+  15% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1.2, 1.1);
+  }
+  40% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(0.95, 0.95);
+  }
+  75% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1.05, 1);
+  }
+  100% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1, 1);
+  }
+}
+
+@keyframes nav-load  {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+@keyframes nav-link-load  {
+    0%{
+        transform: scale(0);
+    }
+
+    90%{
+        transform: scale(1.1);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes nav-first-link-load  {
+    0%{
+        transform: translateX(calc(-1*var(--out-of-page-distance)));
+    }
+
+    50%{
+        transform: translateX(50%);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes nav-last-link-load  {
+    0%{
+        transform: translateX(var(--out-of-page-distance));
+    }
+
+    50%{
+        transform: translateX(-50%);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+
+/* 
+=====================================================================================
+                                    Body
+=====================================================================================
+*/ 
+#banniere{
+    width: 100%;
+    height: fit-content;
+    position: relative;
+}
+
+#banniere img{
+    width: 100%;
+    height: auto;
+    animation: fadeAndScale 3s ease-out;
+    animation-delay: 0.1s;
+    transform-origin: center;
+    animation-duration: 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeAndScale {
+    0% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+#Speech {
+    margin-top: 5%;
+    align-content: center;
+}
+
+#Speech p{
+    margin: auto;
+    align-content: center;
+    text-align: center;
+    width: 70%;
+    font-size: min(3vw, 30px);
+    margin-top: 1%;
+}
+
+#Speech h2{
+    text-size-adjust: 100%;
+    margin: auto;
+    align-content: center;
+    text-align: center;
+    width: 50%;
+    font-size: min(6vw, 55px);
+}
+
+#Jeux{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Jeux h2{
+    text-size-adjust: 100%;
+    margin: auto;
+    align-content: center;
+    text-align: center;
+    width: 50%;
+    font-size: min(6vw, 55px);
+    margin-bottom: 3%;
+} 
+
+.wrapper {
+    display: grid;
+    width: 90%;
+    column-gap: 8%;
+    row-gap: 8vh;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    margin: auto;
+    align-content: center;
+    place-items: center;
+    text-align: center;
+}
+
+.wrapper div {
+    border: 5px solid #969696;
+    width: min(30vw,100%);
+    max-width: 300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper div img{
+    width: 90%;
+    margin: 5%;
+    /*height: auto;*/
+}
+/* 
+=====================================================================================
+                                    Footer
+=====================================================================================
+*/ 
+
+#reseau {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #111214;
+}
+
+#reseau p{
+    margin-top: min(2%,20px);
+    font-size: min(6vw, 25px);
+    background: inherit;
+}
+
+#reseau ul {
+    margin: min(2%,20px);
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    width: min(50%,500px);
+    background: inherit;
+}
+
+#reseau ul li{
+    width: min(50px,8vw);
+    height: min(50px,8vw);
+    background-color: inherit;
+}
+
+#reseau ul li a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-radius: 15px;
+}
+
+#reseau ul li a img {
+    margin: auto;
+    width: 60%;
+    height: auto;
+}
+
+/* 
+=====================================================================================
+                                    Animation
+=====================================================================================
+*/ 
+
+[class*="reveal-"] {
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s ease-in-out;
+}
+
+.reveal-2 {
+    transition-delay: .1s;
+}
+
+.reveal-3 {
+    transition-delay: .2s;
+}
+
+.reveal-4 {
+    transition-delay: .3s;
+}
