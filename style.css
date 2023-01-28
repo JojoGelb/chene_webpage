@@ -249,6 +249,7 @@ header nav ul li:active {
     align-content: center;
     place-items: center;
     text-align: center;
+    grid-auto-rows: 1fr
 }
 
 .wrapper div {
