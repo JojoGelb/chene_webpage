@@ -23,5 +23,6 @@ window.addEventListener("load", (event) => {
     target.forEach( section => {
         observer.observe(section);
     });
+
 });
 

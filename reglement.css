@@ -1,0 +1,62 @@
+*{
+    --title-font-size: min(6vw, 55px);
+    --subtitle-font-size: min(4.5vw, 35px);
+    --text-font-size: min(3vw, 25px);
+}
+
+#Speech {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    align-content: center;
+}
+
+#Speech p{
+    margin: auto;
+    align-content: center;
+    text-align: center;
+    width: 70%;
+    font-size: var(--text-font-size);
+    margin-top: 2%;
+    margin-bottom: max(3%,20px);
+}
+
+h2{
+    text-size-adjust: 100%;
+    margin: auto;
+    align-content: center;
+    text-align: center;
+    font-size: var(--title-font-size);
+}
+
+.gameSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: max(10vh,200px);
+}
+
+.gameSection div{
+    display: flex;
+    justify-content: center;
+}
+
+.gameSection div:nth-child(1){ /* Image */
+    margin-right: 2%;
+    width: 40%;
+    align-items: center;
+}
+
+.gameSection div:nth-child(2){ /* Title + game description */
+    flex-direction: column;
+    width: 40%;
+}
+
+.gameSection h3{
+    margin-bottom: max(5%,10px);
+    font-size: var(--subtitle-font-size);
+}
+
+.gameSection img{
+    height: auto;
+    width: min(90%,300px);
+}
