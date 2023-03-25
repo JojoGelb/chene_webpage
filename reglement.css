@@ -19,6 +19,7 @@
     font-size: var(--text-font-size);
     margin-top: 2%;
     margin-bottom: max(2%,20px);
+    text-shadow: #FC0 1px 0 10px;
 }
 
 h2{
