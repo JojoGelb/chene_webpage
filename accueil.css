@@ -43,7 +43,7 @@
     text-align: center;
     width: 70%;
     font-size: min(3vw, 30px);
-    margin-top: 3%;
+    margin-top: max(3%,40px);
 }
 
 #Speech h2{
