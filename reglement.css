@@ -2,6 +2,7 @@
     --title-font-size: min(6vw, 55px);
     --subtitle-font-size: min(4.5vw, 35px);
     --text-font-size: min(3vw, 25px);
+    --small-text-font-size: min(2.5vw, 20px);
 }
 
 #Speech {
@@ -17,7 +18,7 @@
     width: 70%;
     font-size: var(--text-font-size);
     margin-top: 2%;
-    margin-bottom: max(3%,20px);
+    margin-bottom: max(2%,20px);
 }
 
 h2{
@@ -33,6 +34,8 @@ h2{
     flex-direction: row;
     justify-content: center;
     height: max(10vh,200px);
+    margin-top  : 2%;
+    margin-bottom : 2%;
 }
 
 .gameSection div{
@@ -52,11 +55,16 @@ h2{
 }
 
 .gameSection h3{
-    margin-bottom: max(5%,10px);
+    margin-bottom: max(3%,10px);
     font-size: var(--subtitle-font-size);
 }
 
 .gameSection img{
-    height: auto;
+    height: min(auto,100%);
     width: min(90%,300px);
+}
+
+.gameSection div p{
+    font-size: var(--small-text-font-size);
+    text-align: justify;
 }
