@@ -7,11 +7,15 @@
     width: 100%;
     height: fit-content;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #banniere img{
-    width: 100%;
+    width: max(70%,500px);
     height: auto;
+
     animation: fadeAndScale 3s ease-out;
     animation-delay: 0.1s;
     transform-origin: center;
@@ -32,27 +36,40 @@
 }
 
 
-#Speech {
-    margin-top: 5%;
-    align-content: center;
-}
-
-#Speech p{
-    margin: auto;
-    align-content: center;
-    text-align: center;
-    width: 70%;
-    font-size: min(3vw, 30px);
-    margin-top: max(3%,40px);
-}
-
-#Speech h2{
+.titleh2{
     text-size-adjust: 100%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     align-content: center;
     text-align: center;
     width: 50%;
-    font-size: min(6vw, 55px);
+    font-size: var(--title-font-size);
+}
+
+.SideBySideDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.SideBySideDiv div{
+    width: 50%;
+}
+
+@media (max-width: 1200px) {
+    .SideBySideDiv{
+        flex-direction: column;
+    }
+
+    .SideBySideDiv div{
+        width: 100%;
+    }
+}
+
+#banniereImg{
+    width: 80%;
+    height: auto;
 }
 
 #Jeux{
@@ -64,41 +81,42 @@
     align-items: center;
 }
 
-#Jeux h2{
-    text-size-adjust: 100%;
-    margin: auto;
-    align-content: center;
-    text-align: center;
-    width: 50%;
-    font-size: min(6vw, 55px);
-    margin-bottom: 3%;
-} 
-
-.wrapper {
-    display: grid;
-    width: 90%;
-    column-gap: 8%;
-    row-gap: 8vh;
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-    margin: auto;
-    align-content: center;
-    place-items: center;
-    text-align: center;
-    grid-auto-rows: 1fr
+.gameSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: max(10vh,200px);
+    margin-top  : 2%;
+    margin-bottom : 2%;
 }
 
-.wrapper div {
-    border: 5px solid #2c852a;
-    width: min(30vw,100%);
-    max-width: 300px;
-    height: 100%;
+.gameSection div{
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
-.wrapper div img{
-    width: 90%;
-    margin: 5%;
-    /*height: auto;*/
+.gameSection div:nth-child(1){ /* Image */
+    margin-right: 2%;
+    width: 40%;
+    align-items: center;
+}
+
+.gameSection div:nth-child(2){ /* Title + game description */
+    flex-direction: column;
+    width: 40%;
+}
+
+.gameSection h3{
+    margin-bottom: max(3%,10px);
+    font-size: var(--subtitle-font-size);
+}
+
+.gameSection img{
+    height: min(auto,100%);
+    width: min(90%,300px);
+}
+
+.gameSection div p{
+    font-size: var(--small-text-font-size);
+    text-align: justify;
 }

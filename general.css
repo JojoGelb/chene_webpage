@@ -2,6 +2,11 @@
     margin: 0;
 	padding: 0;
     color: white;
+
+    --title-font-size: min(6vw, 55px);
+    --subtitle-font-size: min(4.5vw, 35px);
+    --text-font-size: min(3vw, 25px);
+    --small-text-font-size: min(2.5vw, 20px);
 }
 
 body{
@@ -17,6 +22,40 @@ body{
     opacity: 0.5;
     text-decoration: none;
     pointer-events: none;
+}
+
+.spaceTop{
+    margin-top: 5%;
+}
+
+.spaceBottom{
+    margin-bottom: 2%;
+}
+
+.CenteredFlex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Speech {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Speech p,.Speech a{
+    margin: auto;
+    align-content: center;
+    text-align: center;
+    width: 70%;
+    font-size: var(--text-font-size);
+    margin-top: max(3%,40px);
+}
+
+.justified{
+    text-align: justify !important;
 }
 
 /* 

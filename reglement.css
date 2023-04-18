@@ -1,25 +1,9 @@
-*{
-    --title-font-size: min(6vw, 55px);
-    --subtitle-font-size: min(4.5vw, 35px);
-    --text-font-size: min(3vw, 25px);
-    --small-text-font-size: min(2.5vw, 20px);
-}
-
-#Speech {
-    margin-top: 2%;
-    margin-bottom: 2%;
-    align-content: center;
-}
-
-#Speech p{
-    margin: auto;
-    align-content: center;
-    text-align: center;
-    width: 70%;
-    font-size: var(--text-font-size);
-    margin-top: 2%;
-    margin-bottom: max(2%,20px);
+.Speech p{
     text-shadow: #FC0 1px 0 10px;
+}
+
+.Speech a{
+    margin-top:  max(2%,20px);;
 }
 
 h2{
