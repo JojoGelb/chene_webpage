@@ -1,4 +1,4 @@
-.Speech p{
+.Speech p, .Speech ul li {
     text-shadow: #FC0 1px 0 10px;
 }
 
@@ -14,42 +14,18 @@ h2{
     font-size: var(--title-font-size);
 }
 
-.gameSection{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: max(10vh,200px);
-    margin-top  : 2%;
-    margin-bottom : 2%;
-}
-
-.gameSection div{
-    display: flex;
-    justify-content: center;
-}
-
-.gameSection div:nth-child(1){ /* Image */
-    margin-right: 2%;
-    width: 40%;
-    align-items: center;
-}
-
-.gameSection div:nth-child(2){ /* Title + game description */
-    flex-direction: column;
-    width: 40%;
-}
-
-.gameSection h3{
-    margin-bottom: max(3%,10px);
+h3{
+    margin: auto;
+    align-content: center;
+    text-align: center;
     font-size: var(--subtitle-font-size);
 }
 
-.gameSection img{
-    height: min(auto,100%);
-    width: min(90%,300px);
+.Speech ul li{
+    font-size: var(--text-font-size);
+    list-style: square;
 }
 
-.gameSection div p{
-    font-size: var(--small-text-font-size);
-    text-align: justify;
+.Speech ul{
+    margin-top: 3%;
 }

@@ -3,10 +3,16 @@
 	padding: 0;
     color: white;
 
+    
     --title-font-size: min(6vw, 55px);
     --subtitle-font-size: min(4.5vw, 35px);
     --text-font-size: min(3vw, 25px);
     --small-text-font-size: min(2.5vw, 20px);
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
 }
 
 body{
@@ -14,6 +20,9 @@ body{
     --nav-load-time: 500ms;
     --nav-link-load-time: 700ms;
     --out-of-page-distance : 200%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .isDisabled {
